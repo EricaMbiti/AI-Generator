@@ -5,9 +5,6 @@ new Typewriter('#api', {
   delay:1,
   cursor:"",
 
-
-
-  
 });
     
 }
@@ -23,28 +20,6 @@ let prompt=`User Instructions :Please generate a api about ${userInput.value}`;
 //let context="You are a Api expert and you only generate the best api's,Your role is to generate the best api and give the response exactly how it would be from an api documentation and with a html <a></a> link for the api to be clicked . please make sure to follow user instructions and keep the response short and simple to understand";
 
 
-/*let context = `
-You are an API expert.Generate a clean and working public API based on the user's request.
-Rules:
-- Always provide a direct API URL(must start with https://) 
-- Keep the explanation very short (1 sentence max)
-- After the link, provide a simple JSON example response
-- Format the response clearly like this:
-
-API:
-https://example.com/api
-
-Example Response:
-{
-  "status": "success",
-  "data": {
-    "example": "value"
-  }
-}
-
-Do not add unnecessary text. Keep everything clean and developer-friendly.
-`;*/
-
 let context = `You are an API expert , please follow my format and return:
 - A direct API link (https://...)
 - A short description (1 sentence)
@@ -54,6 +29,10 @@ Keep it clean and simple and easy to read .`;
 
 let apiUrl=`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+
+let apiElement = document.querySelector("#api");
+apiElement.classList.remove("hidden");
+apiElement.innerHTML=`<div class="generating">⏳Generating ${userInput.value} Api</div>`;
 console.log("Generating api")
 console.log(`prompt : ${prompt}`);
 console.log(`context : ${context}`);

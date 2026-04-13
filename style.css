@@ -7,14 +7,6 @@ a{
     
 }
 
-
-
-
-
-
-
-
-
 h1{
 font-weight: 800;
 font-size: 34px;
@@ -26,13 +18,25 @@ text-align: center;
 margin: 120px auto;
 max-width: 600px;
 }
-form{
-padding: 30px;
+
+.form-container{
+padding:15px  20px;
 background-color: white;
 box-shadow: 0px 20px 60px rgba(65,50 , 100,0.08 );
-border-radius: 10px;
-display: flex;
 margin-bottom: 30px;
+border-radius: 10px;
+
+}
+.hint{
+    line-height: 1.5;
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+
+form{
+display: flex;
 }
 .instructions{
 padding:16px ;
@@ -45,8 +49,7 @@ color: #272044;
 }
 .submit-button{
     margin-left: 10px;
-    background:#2563EB
-    ;
+    background:#2563EB;
     color: white;
     border: none;
     width: 150px;
@@ -54,7 +57,7 @@ color: #272044;
     border-radius: 50px;
     padding: 14px 24px;
 }
-.response{
+.api{
     font-size: 16px;
     background-color: white;
     padding: 20px;
@@ -62,8 +65,25 @@ color: #272044;
     border-left:1px solid #2563EB;
     box-shadow: 0px 4px 30px 0px rgba(39,36 , 66,0.03 );
 }
+.hidden{
+    display: none;
+}
 footer{
     text-align: center;
     font-size: 13px;
     margin: 30px;
 }
+
+
+.generating {
+  animation: smooth-fade 2s linear infinite;
+}
+
+@keyframes smooth-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+
+
